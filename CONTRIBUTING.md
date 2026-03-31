@@ -1,6 +1,8 @@
-# Contributing
+# 🤝 Contributing
 
-## Getting Started
+Thanks for your interest in contributing to **Upwork Bidder**! This guide will help you get started.
+
+## ⚡ Getting Started
 
 ```bash
 # Clone the repo
@@ -17,7 +19,7 @@ pnpm build
 pnpm dev
 ```
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 packages/
@@ -26,14 +28,37 @@ packages/
 └── dashboard/   # Next.js local dashboard
 ```
 
-## Development Workflow
+## 🔄 Development Workflow
 
-1. Create a feature branch from `main`
-2. Make your changes
-3. Run checks: `pnpm precommit`
-4. Submit a pull request
+1. 🌿 Create a feature branch from `main`
+2. ✏️ Make your changes
+3. ✅ Run checks: `pnpm precommit`
+4. 🚀 Submit a pull request
 
-## Available Scripts
+### 🌿 Branch Naming
+
+Use descriptive branch names with a prefix:
+
+- `feat/` — New features (e.g., `feat/add-keyword-filter`)
+- `fix/` — Bug fixes (e.g., `fix/score-calculation`)
+- `docs/` — Documentation changes
+- `refactor/` — Code refactoring
+- `ci/` — CI/CD changes
+- `test/` — Test additions or fixes
+
+### 💬 Commit Messages
+
+We follow [Conventional Commits](https://www.conventionalcommits.org/):
+
+```
+feat: add keyword-based job filtering
+fix: correct niche match score weighting
+docs: update scoring system documentation
+test: add proposal generation tests
+refactor: extract scoring dimensions to constants
+```
+
+## ⌨️ Available Scripts
 
 | Command             | Description                |
 | ------------------- | -------------------------- |
@@ -47,22 +72,26 @@ packages/
 | `pnpm typecheck`    | TypeScript type checking   |
 | `pnpm clean`        | Remove all build artifacts |
 
-## Compliance Rules
+## 🚫 Compliance Rules
 
 When contributing, you **MUST NOT** introduce:
 
-- Auto-refresh or background polling of Upwork pages
-- Scraping bots, crawlers, or unattended monitoring
-- Auto-apply or proposal auto-submission
-- Cookie/session/credential capture
-- Click simulation or form automation
-- Background tab data collection
+- 🔄 Auto-refresh or background polling of Upwork pages
+- 🕷️ Scraping bots, crawlers, or unattended monitoring
+- 🤖 Auto-apply or proposal auto-submission
+- 🔑 Cookie/session/credential capture
+- 👆 Click simulation or form automation
+- 📡 Background tab data collection
 
-All actions must be **user-initiated only**.
+**All actions must be user-initiated only.**
 
-## Code Style
+## 🎨 Code Style
 
-- TypeScript everywhere
-- ESLint + Prettier enforced
-- Flat ESLint config (`eslint.config.mjs`)
-- 2-space indentation, single quotes, trailing commas
+- 🔷 TypeScript everywhere
+- 🔍 ESLint + Prettier enforced
+- ⚙️ Flat ESLint config (`eslint.config.mjs`)
+- 📐 2-space indentation, single quotes, trailing commas
+
+## ❓ Questions?
+
+Open an [Issue](https://github.com/rishat5081/upwork-bidding/issues) or check existing discussions.
