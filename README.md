@@ -1,70 +1,76 @@
-# Upwork Bidder
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js" />
+  <img src="https://img.shields.io/badge/TypeScript-strict-blue?style=for-the-badge&logo=typescript" />
+  <img src="https://img.shields.io/badge/Chrome-Manifest_V3-4285F4?style=for-the-badge&logo=googlechrome" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwindcss" />
+  <img src="https://img.shields.io/badge/Vitest-17_Tests-6E9F18?style=for-the-badge&logo=vitest" />
+  <img src="https://img.shields.io/github/actions/workflow/status/rishat5081/upwork-bidding/ci.yml?style=for-the-badge&label=CI" />
+</p>
 
-> Manual-assist tool for analyzing Upwork job posts and generating tailored proposals.
-
-A local-first Chrome extension + dashboard that helps freelancers evaluate job fit and draft better proposals — grounded in your real resume, case studies, and positioning.
-
-[![CI](https://github.com/rishat5081/upwork-bidding/actions/workflows/ci.yml/badge.svg)](https://github.com/rishat5081/upwork-bidding/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-
----
-
-## Table of Contents
-
-- [What It Does](#what-it-does)
-- [What It Does NOT Do](#what-it-does-not-do)
-- [Screenshots](#screenshots)
-- [Prerequisites](#prerequisites)
-- [Quick Start](#quick-start)
-- [How to Use](#how-to-use)
-- [Project Structure](#project-structure)
-- [Scoring System](#scoring-system)
-- [Proposal Generation](#proposal-generation)
-- [Available Commands](#available-commands)
-- [Configuration](#configuration)
-- [Tech Stack](#tech-stack)
-- [Contributing](#contributing)
-- [License](#license)
+<h1 align="center">🎯 Upwork Bidder</h1>
+<p align="center"><strong>Manual-assist tool for analyzing Upwork job posts and generating tailored proposals.</strong></p>
+<p align="center">
+  A local-first Chrome extension + dashboard that helps freelancers evaluate job fit and draft better proposals — grounded in your real resume, case studies, and positioning.
+</p>
 
 ---
 
-## What It Does
+## 📑 Table of Contents
 
-- **Reads** job details from an already-open Upwork job page when you **manually click** a button
-- **Scores** the job (0-100) as **Strong Fit**, **Possible Fit**, or **Skip** with transparent reasoning
-- **Generates** tailored proposal drafts grounded in your real resume and case studies
-- **Explains** why a job is a fit or not — red flags, green flags, dimension scores
-- **Provides** copy buttons for all generated content (opening lines, proposals, CTAs)
-- **Stores** analyzed jobs locally for reference and review
+- [✨ What It Does](#-what-it-does)
+- [🚫 What It Does NOT Do](#-what-it-does-not-do)
+- [📸 Screenshots](#-screenshots)
+- [📋 Prerequisites](#-prerequisites)
+- [⚡ Quick Start](#-quick-start)
+- [🖱️ How to Use](#️-how-to-use)
+- [📁 Project Structure](#-project-structure)
+- [📊 Scoring System](#-scoring-system)
+- [✍️ Proposal Generation](#️-proposal-generation)
+- [⌨️ Available Commands](#️-available-commands)
+- [⚙️ Configuration](#️-configuration)
+- [🛠️ Tech Stack](#️-tech-stack)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
 
 ---
 
-## What It Does NOT Do
+## ✨ What It Does
 
-> **COMPLIANCE & SAFETY — READ THIS**
+- 📖 **Reads** job details from an already-open Upwork job page when you **manually click** a button
+- 📊 **Scores** the job (0-100) as **Strong Fit**, **Possible Fit**, or **Skip** with transparent reasoning
+- ✍️ **Generates** tailored proposal drafts grounded in your real resume and case studies
+- 🔍 **Explains** why a job is a fit or not — red flags, green flags, dimension scores
+- 📋 **Provides** copy buttons for all generated content (opening lines, proposals, CTAs)
+- 💾 **Stores** analyzed jobs locally for reference and review
+
+---
+
+## 🚫 What It Does NOT Do
+
+> **⚠️ COMPLIANCE & SAFETY — READ THIS**
 
 | Prohibited Action                              | Status    |
 | ---------------------------------------------- | --------- |
-| Auto-refresh or poll Upwork pages              | **NEVER** |
-| Scrape, crawl, or spider Upwork                | **NEVER** |
-| Run in background or on idle tabs              | **NEVER** |
-| Auto-apply or submit proposals                 | **NEVER** |
-| Export cookies, sessions, or credentials       | **NEVER** |
-| Simulate clicks, form fills, or human behavior | **NEVER** |
-| Send data to external servers                  | **NEVER** |
-| Use hidden browser automation                  | **NEVER** |
+| 🔄 Auto-refresh or poll Upwork pages              | **NEVER** |
+| 🕷️ Scrape, crawl, or spider Upwork                | **NEVER** |
+| 🔇 Run in background or on idle tabs              | **NEVER** |
+| 🤖 Auto-apply or submit proposals                 | **NEVER** |
+| 🔑 Export cookies, sessions, or credentials       | **NEVER** |
+| 👆 Simulate clicks, form fills, or human behavior | **NEVER** |
+| 📤 Send data to external servers                  | **NEVER** |
+| 🕵️ Use hidden browser automation                  | **NEVER** |
 
 **All actions are user-initiated. You remain in full control at all times.**
 
 ---
 
-## Screenshots
+## 📸 Screenshots
 
 > _Load the extension and dashboard to see the UI. The dashboard runs at `http://localhost:3000`._
 
 ---
 
-## Prerequisites
+## 📋 Prerequisites
 
 | Requirement                                     | Minimum                      |
 | ----------------------------------------------- | ---------------------------- |
@@ -74,9 +80,9 @@ A local-first Chrome extension + dashboard that helps freelancers evaluate job f
 
 ---
 
-## Quick Start
+## ⚡ Quick Start
 
-### 1. Clone & Install
+### 1️⃣ Clone & Install
 
 ```bash
 git clone https://github.com/rishat5081/upwork-bidding.git
@@ -86,15 +92,15 @@ pnpm setup:all
 
 This single command installs all dependencies and builds every package.
 
-### 2. Start the Dashboard
+### 2️⃣ Start the Dashboard
 
 ```bash
 pnpm dev
 ```
 
-Dashboard runs at **http://localhost:3000**
+Dashboard runs at **http://localhost:3000** 🎉
 
-### 3. Load the Chrome Extension
+### 3️⃣ Load the Chrome Extension
 
 1. Open Chrome → navigate to `chrome://extensions/`
 2. Enable **Developer mode** (toggle in top-right corner)
@@ -102,7 +108,7 @@ Dashboard runs at **http://localhost:3000**
 4. Select the folder: **`packages/extension/dist/`**
 5. Pin the extension icon in your toolbar for easy access
 
-### 4. Analyze a Job
+### 4️⃣ Analyze a Job
 
 1. Open any Upwork job page manually in Chrome
 2. Click the extension icon → **"Analyze Current Job"**
@@ -112,9 +118,9 @@ Dashboard runs at **http://localhost:3000**
 
 ---
 
-## How to Use
+## 🖱️ How to Use
 
-### Extension Popup
+### 🧩 Extension Popup
 
 | Button                  | What It Does                                                     |
 | ----------------------- | ---------------------------------------------------------------- |
@@ -123,7 +129,7 @@ Dashboard runs at **http://localhost:3000**
 | **Copy Job Summary**    | Extract job data and copy a text summary to clipboard            |
 | **Open Dashboard**      | Open `http://localhost:3000` in a new tab                        |
 
-### Dashboard Pages
+### 📊 Dashboard Pages
 
 | Page             | Purpose                                                      |
 | ---------------- | ------------------------------------------------------------ |
@@ -135,7 +141,7 @@ Dashboard runs at **http://localhost:3000**
 | **Templates**    | Saved proposal templates                                     |
 | **Settings**     | LLM config, data export/import                               |
 
-### Job Detail Page
+### 🔍 Job Detail Page
 
 The most important page. Shows:
 
@@ -150,7 +156,7 @@ The most important page. Shows:
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 upwork-bidding/
@@ -201,7 +207,7 @@ upwork-bidding/
 
 ---
 
-## Scoring System
+## 📊 Scoring System
 
 Jobs are scored 0-100 across **8 weighted dimensions**:
 
@@ -216,15 +222,15 @@ Jobs are scored 0-100 across **8 weighted dimensions**:
 | **Competitiveness**      | 1x     | Proposal count (fewer = better)                                 |
 | **Case Study Relevance** | 1.5x   | You have directly relevant portfolio work                       |
 
-### Score Labels
+### 🏷️ Score Labels
 
 | Score  | Label            | Action                                  |
 | ------ | ---------------- | --------------------------------------- |
-| 70-100 | **Strong Fit**   | Generate confident, targeted proposal   |
-| 41-69  | **Possible Fit** | Generate cautious but credible proposal |
-| 0-40   | **Skip**         | Brief note: why skip, what's missing    |
+| 🟢 70-100 | **Strong Fit**   | Generate confident, targeted proposal   |
+| 🟡 41-69  | **Possible Fit** | Generate cautious but credible proposal |
+| 🔴 0-40   | **Skip**         | Brief note: why skip, what's missing    |
 
-### Red Flags (reduce score)
+### 🚩 Red Flags (reduce score)
 
 - Vague job post with no technical details
 - Unrealistic budget for described scope
@@ -235,7 +241,7 @@ Jobs are scored 0-100 across **8 weighted dimensions**:
 - Unverified client with no hiring history
 - Skills on your avoid list
 
-### Green Flags (increase score)
+### ✅ Green Flags (increase score)
 
 - Clear backend/API problem
 - Webhooks, integrations, automation
@@ -247,11 +253,11 @@ Jobs are scored 0-100 across **8 weighted dimensions**:
 
 ---
 
-## Proposal Generation
+## ✍️ Proposal Generation
 
 Proposals are generated using **rules-based logic** grounded in your resume and case studies. No LLM required.
 
-### Generated Content
+### 📝 Generated Content
 
 | Section                  | Description                                                    |
 | ------------------------ | -------------------------------------------------------------- |
@@ -263,7 +269,7 @@ Proposals are generated using **rules-based logic** grounded in your resume and 
 | **Clarifying Questions** | 2-3 questions about what's missing from the job post           |
 | **CTA**                  | Specific, actionable call to action                            |
 
-### Writing Rules
+### ✏️ Writing Rules
 
 - Direct, practical, no fluff
 - Not generic, not overhyped
@@ -272,7 +278,7 @@ Proposals are generated using **rules-based logic** grounded in your resume and 
 - No fabricated experience or impossible timelines
 - Strong backend/integration language
 
-### Optional LLM Enhancement
+### 🤖 Optional LLM Enhancement
 
 Set in `.env`:
 
@@ -285,7 +291,7 @@ The tool works fully without any LLM.
 
 ---
 
-## Available Commands
+## ⌨️ Available Commands
 
 | Command                | Description                                             |
 | ---------------------- | ------------------------------------------------------- |
@@ -308,9 +314,9 @@ The tool works fully without any LLM.
 
 ---
 
-## Configuration
+## ⚙️ Configuration
 
-### Environment Variables
+### 🔐 Environment Variables
 
 Copy `.env.example` to `.env`:
 
@@ -325,7 +331,7 @@ cp .env.example .env
 | `OPENAI_API_KEY`    | —       | OpenAI API key (if using)        |
 | `ANTHROPIC_API_KEY` | —       | Anthropic API key (if using)     |
 
-### Profile Customization
+### 👤 Profile Customization
 
 Edit your profile in the dashboard at `/profile`:
 
@@ -337,7 +343,7 @@ Edit your profile in the dashboard at `/profile`:
 - Avoid list (skills/categories to skip)
 - Proposal tone (direct / friendly / formal)
 
-### Data Storage
+### 💾 Data Storage
 
 All data is stored locally in `packages/dashboard/data/db.json`. No cloud dependency.
 
@@ -348,24 +354,24 @@ Export/import via the Settings page or API:
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-| Component      | Technology                    |
-| -------------- | ----------------------------- |
-| **Monorepo**   | pnpm workspaces               |
-| **Language**   | TypeScript (strict mode)      |
-| **Extension**  | Chrome Manifest V3, Vite      |
-| **Dashboard**  | Next.js 14 (App Router)       |
-| **UI**         | React 18, Tailwind CSS        |
-| **Database**   | JSON file (local persistence) |
-| **Testing**    | Vitest                        |
-| **Linting**    | ESLint 10 (flat config)       |
-| **Formatting** | Prettier                      |
-| **CI/CD**      | GitHub Actions                |
+| | Component      | Technology                    |
+|---|-------------- | ----------------------------- |
+| 📦 | **Monorepo**   | pnpm workspaces               |
+| 🔷 | **Language**   | TypeScript (strict mode)      |
+| 🧩 | **Extension**  | Chrome Manifest V3, Vite      |
+| ⚡ | **Dashboard**  | Next.js 14 (App Router)       |
+| 🎨 | **UI**         | React 18, Tailwind CSS        |
+| 🗄️ | **Database**   | JSON file (local persistence) |
+| 🧪 | **Testing**    | Vitest                        |
+| 🔍 | **Linting**    | ESLint 10 (flat config)       |
+| 💅 | **Formatting** | Prettier                      |
+| 🚀 | **CI/CD**      | GitHub Actions                |
 
 ---
 
-## API Reference
+## 🔌 API Reference
 
 All API routes support CORS and are available at `http://localhost:3000/api/`.
 
@@ -392,12 +398,21 @@ All API routes support CORS and are available at `http://localhost:3000/api/`.
 
 ---
 
-## Contributing
+## 🤝 Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup and guidelines.
 
 ---
 
-## License
+## 📄 License
 
 [MIT](LICENSE) — Saad Sohail
+
+---
+
+<p align="center">
+  Built with 🧩 Chrome Extension &nbsp;·&nbsp; ⚡ Next.js &nbsp;·&nbsp; 🔷 TypeScript
+</p>
+<p align="center">
+  <sub>Made by <a href="https://github.com/rishat5081">@rishat5081</a></sub>
+</p>
