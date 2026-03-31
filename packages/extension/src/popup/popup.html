@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upwork Bidder</title>
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <h1>Upwork Bidder</h1>
+        <span class="badge manual-badge">Manual Assist Only</span>
+      </header>
+
+      <div id="status" class="status">
+        <div id="status-icon" class="status-icon"></div>
+        <span id="status-text">Checking page...</span>
+      </div>
+
+      <div id="job-preview" class="job-preview hidden">
+        <h3 id="job-title-preview" class="job-title"></h3>
+        <div id="score-preview" class="score-preview hidden">
+          <span id="score-badge" class="score-badge"></span>
+          <span id="score-value" class="score-value"></span>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="btn-analyze" class="btn btn-primary" disabled>Analyze Current Job</button>
+        <button id="btn-send" class="btn btn-secondary" disabled>Send to Dashboard</button>
+        <button id="btn-copy" class="btn btn-secondary" disabled>Copy Job Summary</button>
+        <button id="btn-dashboard" class="btn btn-outline">Open Dashboard</button>
+      </div>
+
+      <div id="message" class="message hidden"></div>
+
+      <footer class="footer">
+        <small>Review before using. Manual submission only.</small>
+      </footer>
+    </div>
+    <script type="module" src="./popup.ts"></script>
+  </body>
+</html>

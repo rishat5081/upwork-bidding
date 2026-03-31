@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Upwork Bidder - Job Analyzer",
+  "version": "1.0.0",
+  "description": "Manually analyze Upwork job posts and generate tailored proposals. Manual-assist only.",
+  "permissions": ["activeTab", "storage", "scripting"],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": "icons/icon.svg"
+  },
+  "icons": {
+    "128": "icons/icon.svg"
+  },
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.upwork.com/jobs/*",
+        "https://www.upwork.com/freelance-jobs/*",
+        "https://www.upwork.com/ab/proposals/job/*/apply*"
+      ],
+      "js": ["content/content.js"],
+      "css": ["content/content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": ["http://localhost:3000/*"]
+}

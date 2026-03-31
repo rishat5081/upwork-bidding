@@ -1,0 +1,44 @@
+{
+  "name": "upwork-bidder",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Manual-assist Upwork job analysis and proposal generation tool. Chrome extension + local dashboard for analyzing Upwork jobs and generating tailored proposals.",
+  "author": "Saad Sohail <engr.saadsohail@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rishat5081/upwork-bidding.git"
+  },
+  "scripts": {
+    "setup:all": "pnpm install && pnpm build",
+    "dev": "pnpm --filter dashboard dev",
+    "build": "pnpm build:shared && pnpm build:dashboard && pnpm build:extension",
+    "build:shared": "pnpm --filter @upwork-bidder/shared build",
+    "build:dashboard": "pnpm --filter dashboard build",
+    "build:extension": "pnpm --filter extension build",
+    "dev:dashboard": "pnpm --filter dashboard dev",
+    "dev:extension": "pnpm --filter extension dev",
+    "test": "pnpm --filter @upwork-bidder/shared test",
+    "test:watch": "pnpm --filter @upwork-bidder/shared test:watch",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "pnpm -r --parallel run typecheck",
+    "clean": "pnpm -r exec rm -rf dist .next out && rm -rf node_modules/.cache",
+    "precommit": "pnpm lint && pnpm format:check && pnpm test"
+  },
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=9"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/eslint__js": "^9.14.0",
+    "eslint": "^10.1.0",
+    "eslint-config-prettier": "^10.0.0",
+    "prettier": "^3.8.1",
+    "typescript-eslint": "^8.58.0"
+  }
+}

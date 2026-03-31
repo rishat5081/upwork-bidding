@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --strong-fit: #22c55e;
+  --possible-fit: #f59e0b;
+  --skip: #ef4444;
+}
