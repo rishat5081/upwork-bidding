@@ -1,0 +1,38 @@
+{
+  "name": "upwork-bidder",
+  "namespace": "upwork-bidder",
+  "topology": "hierarchical",
+  "description": "Monorepo: Chrome extension + dashboard for Upwork job analysis and proposal generation",
+  "agents": {
+    "teamFile": ".agents/team.json",
+    "agentDocs": ".claude/agents/"
+  },
+  "routing": {
+    "rules": [
+      { "pattern": "bug-fix", "agent": "tester", "priority": "high" },
+      { "pattern": "feature", "agent": "planner", "priority": "normal" },
+      { "pattern": "security", "agent": "security-auditor", "priority": "critical" },
+      { "pattern": "testing", "agent": "tester", "priority": "normal" },
+      { "pattern": "refactor", "agent": "architect", "priority": "normal" },
+      { "pattern": "review", "agent": "reviewer", "priority": "normal" },
+      { "pattern": "performance", "agent": "performance", "priority": "normal" },
+      { "pattern": "release", "agent": "release-manager", "priority": "normal" },
+      { "pattern": "issue", "agent": "issue-tracker", "priority": "normal" },
+      { "pattern": "quality", "agent": "code-analyzer", "priority": "normal" },
+      { "pattern": "deploy", "agent": "production-validator", "priority": "high" },
+      { "pattern": "ci", "agent": "devops", "priority": "normal" }
+    ]
+  },
+  "memory": {
+    "namespace": "upwork-bidder",
+    "isolation": true,
+    "persistence": true
+  },
+  "ci": {
+    "test": "pnpm test",
+    "lint": "pnpm lint",
+    "typecheck": "pnpm typecheck",
+    "build": "pnpm build",
+    "format": "pnpm format:check"
+  }
+}
